@@ -1,205 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Bootstrap 4 Example</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-		<style>
-				body {
-					font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-				}
 
-				html {
- 					 scroll-behavior: smooth;
-				}
-				label {
-					margin-top: 15px;
-				}
-				.btn {
-					margin-top: 20px;
-				}
-		</style>
-	</head>
-	<body>
-		<section>
-			<div class="d-flex text-light flex-column pt-5" lc-helper="background" style="min-height: 100vh; background-size:cover; background-position: center center;background-color:#eee; background-attachment:scroll;background-image: url(https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9); background-attachment: fixed;">
-				<div class="w-100 text-center flex-start align-content-start" style="margin-bottom: auto; ">
-					<h1 class="font-weight-bold" style="font-size:10vw;" editable="inline">CAR RENTAL</h1>
-					<p class="font-weight-light" style="font-size:2vw;" editable="inline">WYPOŻYCZALNIA</p>
-				</div>
-				<div class="w-100 text-center flex-end align-content-end" style="margin-top: auto; ">
-					<a href="#login"><i class="fa text-warning p-5 fa-arrow-circle-down" style="font-size:50px; align-self: flex-end; margin-top: auto;">
+<head>
+    <title>Bootstrap 4 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        label {
+            margin-top: 15px;
+        }
+        
+        .btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="d-flex text-light flex-column pt-5" lc-helper="background" style="min-height: 100vh; background-size:cover; background-position: center center;background-color:#eee; background-attachment:scroll;background-image: url(https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9); background-attachment: fixed;">
+            <div class="w-100 text-center flex-start align-content-start" style="margin-bottom: auto; ">
+                <h1 class="font-weight-bold" style="font-size:10vw;" editable="inline">CAR RENTAL</h1>
+                <p class="font-weight-light" style="font-size:2vw;" editable="inline">WYPOŻYCZALNIA</p>
+            </div>
+            <div class="w-100 text-center flex-end align-content-end" style="margin-top: auto; ">
+                <a href="#login"><i class="fa text-warning p-5 fa-arrow-circle-down" style="font-size:50px; align-self: flex-end; margin-top: auto;">
 					</i></a>
-				</div>
-			</div>
-		</section>
-		<section >
-			<div class="container-fluid p-0" id="login">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="lc-block p-5">
-							<div editable="rich">
-								<form class="form-horizontal">
-									<fieldset>
-										<!-- Form Name -->
-										<h1>Booking</h1>
-										<!-- Select Basic -->
-<div class="row">
-	<div class="col-md-6 ">
-										<label class="control-label" for="Start">Place of start</label>
-										<select id="Start" name="Start" class="form-control">
-											<option value="1">Choose a city</option>
-											<option value="2">Amsterdam</option>
-											<option value="3">Berlin</option>
-											<option value="4">Hamburg</option>
-										</select>
-	</div>
-	<div class="col-md-6 ">
-										<label class="col-md-6 control-label" for="destination">Destination</label>
-										<select id="destination" name="destination" class="form-control">
-											<option value="1">Choose a city</option>
-											<option value="2">Amsterdam</option>
-											<option value="3">Barlin</option>
-											<option value="4">Hamburg</option>
-										</select>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid p-0" id="login">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="lc-block p-5">
+                        <div editable="rich">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <h1>Booking</h1>
+                                    <!-- Select Basic -->
+                                    <div class="row">
+                                        <div class="col-md-6 ">
+                                            <label class="control-label" for="Start">Place of start</label>
+                                            <select id="Start" name="Start" class="form-control">
+                                                <option value="1">Choose a city</option>
+                                                <option value="2">Amsterdam</option>
+                                                <option value="3">Berlin</option>
+                                                <option value="4">Hamburg</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <label class="col-md-6 control-label" for="destination">Destination</label>
+                                            <select id="destination" name="destination" class="form-control">
+                                                <option value="1">Choose a city</option>
+                                                <option value="2">Amsterdam</option>
+                                                <option value="3">Barlin</option>
+                                                <option value="4">Hamburg</option>
+                                            </select>
 
-	</div>
-</div>
+                                        </div>
+                                    </div>
 
-<div class="row">
-	<div class="col-md-6 ">
-										<!-- Text input-->
-										<label class="control-label" for="data">Date of rental</label>
-										<input id="data" name="data" type="text" placeholder="DD.MM.YYYY" class="form-control input-md">
+                                    <div class="row">
+                                        <div class="col-md-6 ">
+                                            <!-- Text input-->
+                                            <label class="control-label" for="data">Date of rental</label>
+                                            <input id="data" name="data" type="text" placeholder="DD.MM.YYYY" class="form-control input-md">
 
-</div>
-	<div class="col-md-6 ">
-										<!-- Text input-->
-										<label class="control-label" for="data2">Date of return</label>
-										<input id="data2" name="data2" type="text" placeholder="DD.MM.YYYY" class="form-control input-md" required="">
-</div>
-</div>
-										<label class="col-md-4 control-label" for="koszt">Estimated cost</label>
-										<input id="koszt" name="koszt" type="text" placeholder="" class="form-control input-md">
-										<!-- Button -->
-										<button id="singlebutton" name="singlebutton" class="btn btn-primary">Search</button>
-									</fieldset>
-								</form>
-							</div>
-							</div><!-- /lc-block -->
-							</div><!-- /col -->
-							<div class="col-md-6" style="background: url(https://images.unsplash.com/photo-1549275301-c9d60945be6b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9); background-attachment: fixed; background-position: center right">
-								<div class="lc-block d-block mh-50">
-									<div editable="rich" class="p-5">
-										<form class="form-horizontal text-light">
-											<fieldset>
-												<!-- Form Name -->
-												<h1>Login</h1>
-												<!-- Text input-->
-												<label class="col-md-4 control-label" for="email"></label>
-												<input id="email" name="email" type="text" placeholder="Your E-mail" class="form-control input-md">
-												<!-- Password input-->
-												<label class="col-md-4 control-label" for="passwordinput"></label>
-												<input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md">
-												<!-- Button -->
-												<button id="" name="" class="btn btn-primary">Login</button>
-												<div class="row d-block p-3">If you do not have an account please <a href="#register" style="text-decoration: underline;">REGISTER</a>.</div>
-											</fieldset>
-										</form>
-									</div>
-									</div><!-- /lc-block -->
-									</div><!-- /col -->
-								</div>
-							</div>
-						</section>
-						<section class=" bg-light" id="register">
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-md-6" style="background: url(https://images.unsplash.com/photo-1471540161297-5ddd90d98af1?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9)">
-										<div class="lc-block">
-											<p></p>
-											</div><!-- /lc-block -->
-											</div><!-- /col -->
-											<div class="col-md-6">
-												<div class="lc-block p-5">
-													<div editable="rich">
-														<p></p>
-														<form class="form-horizontal">
-															<fieldset>
-																<!-- Form Name -->
-																<h1>Register</h1>
-																<!-- Text input-->
-																<label class="col-md-4 control-label" for="textinput"></label>
-																<input id="textinput" name="textinput" type="text" placeholder="Full name" class="form-control input-md">
-																<!-- Text input-->
-																<label class="col-md-4 control-label" for="email"></label>
-																<input id="email" name="email" type="text" placeholder="Your E-mail" class="form-control input-md">
-																<!-- Password input-->
-																<label class="col-md-4 control-label" for="passwordinput"></label>
-																<input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md">
-																<!-- Text input-->
-																<label class="col-md-4 control-label" for="birth"></label>
-																<input id="birth" name="birth" type="text" placeholder="Date of birth" class="form-control input-md">
-																<!-- Text input-->
-																<label class="col-md-4 control-label" for="textinput"></label>
-																<input id="textinput" name="textinput" type="text" placeholder="Adress" class="form-control input-md">
-																<!-- Text input-->
-																<label class="col-md-4 control-label" for="textinput"></label>
-																<input id="textinput" name="textinput" type="text" placeholder="City" class="form-control input-md">
-																<!-- Button -->
-																<button id="" name="" class="btn btn-primary">Register</button>
-															</fieldset>
-														</form>
-													</div>
-													</div><!-- /lc-block -->
-													</div><!-- /col -->
-												</div>
-											</div>
-										</section>
-									</body>
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <!-- Text input-->
+                                            <label class="control-label" for="data2">Date of return</label>
+                                            <input id="data2" name="data2" type="text" placeholder="DD.MM.YYYY" class="form-control input-md" required="">
+                                        </div>
+                                    </div>
+                                    <label class="col-md-4 control-label" for="koszt">Estimated cost</label>
+                                    <input id="koszt" name="koszt" type="text" placeholder="" class="form-control input-md">
+                                    <!-- Button -->
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Search</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                </div>
+                <!-- /col -->
+                <div class="col-md-6" style="background: url(https://images.unsplash.com/photo-1549275301-c9d60945be6b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9); background-attachment: fixed; background-position: center right">
+                    <div class="lc-block d-block mh-50">
+                        <div editable="rich" class="p-5">
+                            <form class="form-horizontal text-light">
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <h1>Login</h1>
+                                    <!-- Text input-->
+                                    <label class="col-md-4 control-label" for="email"></label>
+                                    <input id="email" name="email" type="text" placeholder="Your E-mail" class="form-control input-md">
+                                    <!-- Password input-->
+                                    <label class="col-md-4 control-label" for="passwordinput"></label>
+                                    <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md">
+                                    <!-- Button -->
+                                    <button id="" name="" class="btn btn-primary">Login</button>
+                                    <div class="row d-block p-3">If you do not have an account please <a href="#register" style="text-decoration: underline;">REGISTER</a>.</div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                </div>
+                <!-- /col -->
+            </div>
+        </div>
+    </section>
+    <section class=" bg-light" id="register">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" style="background: url(https://images.unsplash.com/photo-1471540161297-5ddd90d98af1?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9)">
+                    <div class="lc-block">
+                        <p></p>
+                    </div>
+                    <!-- /lc-block -->
+                </div>
+                <!-- /col -->
+                <div class="col-md-6">
+                    <div class="lc-block p-5">
+                        <div editable="rich">
+                            <p></p>
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- Form Name -->
+                                    <h1>Register</h1>
+                                    <!-- Text input-->
+                                    <label class="col-md-4 control-label" for="textinput"></label>
+                                    <input id="textinput" name="textinput" type="text" placeholder="Full name" class="form-control input-md">
+                                    <!-- Text input-->
+                                    <label class="col-md-4 control-label" for="email"></label>
+                                    <input id="email" name="email" type="text" placeholder="Your E-mail" class="form-control input-md">
+                                    <!-- Password input-->
+                                    <label class="col-md-4 control-label" for="passwordinput"></label>
+                                    <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md">
+                                    <!-- Text input-->
+                                    <label class="col-md-4 control-label" for="birth"></label>
+                                    <input id="birth" name="birth" type="text" placeholder="Date of birth" class="form-control input-md">
+                                    <!-- Text input-->
+                                    <label class="col-md-4 control-label" for="textinput"></label>
+                                    <input id="textinput" name="textinput" type="text" placeholder="Adress" class="form-control input-md">
+                                    <!-- Text input-->
+                                    <label class="col-md-4 control-label" for="textinput"></label>
+                                    <input id="textinput" name="textinput" type="text" placeholder="City" class="form-control input-md">
+                                    <!-- Button -->
+                                    <button id="" name="" class="btn btn-primary">Register</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /lc-block -->
+                </div>
+                <!-- /col -->
+            </div>
+        </div>
+    </section>
+	
+	<footer class="p-5 bg-dark text-center text-light">
+® Car rent
+	</footer>
+		
+</body>
 
-									<script>
-										/ Select all links with hashes
-$('a[href*="#"]')
- 
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
+<script>
+    / Select all links with hashes
+    $('a[href*="#"]')
+
+    .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
         });
-      }
-    }
-  });
-									</script>
-								</html>
+</script>
+
+</html>
